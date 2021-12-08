@@ -25,7 +25,7 @@ public class FindRates {
 		rp = new ResortsPage(driver);
 		driver.get("https://disneyworld.disney.go.com/");		
 		driver.manage().window().maximize();				
-		System.out.println("---Opened Disney Homepage---");		
+		System.out.println("--Opened Disney Homepage---");		
 		wait.until(ExpectedConditions.visibilityOf(obj.hideButton));
 		obj.hideButton.click();
 		wait.until(ExpectedConditions.elementToBeClickable(obj.checkInDateSelector));
