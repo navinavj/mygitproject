@@ -5,8 +5,8 @@
     <classes>
       <class name="tests.practice">
         <methods>
-          <include name="findRates"/>
           <include name="afterClass"/>
+          <include name="CurrenctConversion"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- tests.practice -->
