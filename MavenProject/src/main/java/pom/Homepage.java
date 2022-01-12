@@ -19,10 +19,10 @@ public class Homepage {
 	@FindBy(id = "checkInDate_display")
 	public WebElement checkInDateSelector;
 	
-	@FindBy(id = "12_18_2021")
+	@FindBy(id = "2_18_2022")
 	public WebElement checkInDate;
 	
-	@FindBy(id = "12_24_2021")
+	@FindBy(id = "2_24_2022")
 	public WebElement checkOutDate;
 	
 	@FindBy(id = "findPricesButton")
