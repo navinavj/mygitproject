@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.practice">
+      <class name="tests.FindRates">
         <methods>
-          <include name="afterClass"/>
-          <include name="CurrenctConversion"/>
           <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="findRates"/>
         </methods>
-      </class> <!-- tests.practice -->
+      </class> <!-- tests.FindRates -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

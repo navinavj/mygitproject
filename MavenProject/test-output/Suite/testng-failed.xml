@@ -17,13 +17,6 @@
           <include name="findRates"/>
         </methods>
       </class> <!-- tests.FindRates -->
-      <class name="tests.NewTest">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="openMyBlog"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- tests.NewTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
