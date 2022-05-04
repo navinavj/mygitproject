@@ -1,10 +1,13 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
 
 public class NewTest {
 	
@@ -20,9 +23,9 @@ public class NewTest {
   @BeforeClass
   public void beforeClass() {
 	  
-	  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-	  driver = new ChromeDriver();
-	  System.out.println("opening chrome");
+	  WebDriverManager.edgedriver().setup();
+	  driver = new EdgeDriver();
+	  System.out.println("opening edge");
 	  
   }
 

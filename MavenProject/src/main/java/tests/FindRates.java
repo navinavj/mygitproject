@@ -1,10 +1,11 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import pom.Homepage;
 import pom.ResortsPage;
 import org.testng.annotations.BeforeClass;
@@ -51,16 +52,16 @@ public class FindRates {
   @BeforeClass
   public void beforeClass() {
 	  
-	  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-	  driver = new ChromeDriver();
-	  System.out.println("---Opening Chrome---"); 
+	  WebDriverManager.edgedriver().setup();
+	  driver = new EdgeDriver();
+	  System.out.println("---Opening Edge---"); 
   }
 
   @AfterClass
   public void afterClass() {
 	  
 	  driver.quit();
-	  System.out.println("---Closing Chrome---");
+	  System.out.println("---Closing Edge---");
   }
 
 }
