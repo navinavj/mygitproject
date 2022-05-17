@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-18T02:52:01 IST" name="Suite" finished-at="2022-05-18T02:52:38 IST" duration-ms="37369">
+    <groups>
+    </groups>
+    <test started-at="2022-05-18T02:52:01 IST" name="Test" finished-at="2022-05-18T02:52:38 IST" duration-ms="37369">
+      <class name="tests.NewTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.NewTest@23f7d05d]" started-at="2022-05-18T02:52:01 IST" name="beforeClass" finished-at="2022-05-18T02:52:03 IST" duration-ms="2514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="openMyBlog()[pri:0, instance:tests.NewTest@23f7d05d]" started-at="2022-05-18T02:52:03 IST" name="openMyBlog" finished-at="2022-05-18T02:52:07 IST" duration-ms="3507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMyBlog -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.NewTest@23f7d05d]" started-at="2022-05-18T02:52:07 IST" name="afterClass" finished-at="2022-05-18T02:52:07 IST" duration-ms="320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- tests.NewTest -->
+      <class name="tests.FindRates">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.FindRates@7f1302d6]" started-at="2022-05-18T02:52:07 IST" name="beforeClass" finished-at="2022-05-18T02:52:08 IST" duration-ms="923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="findRates()[pri:0, instance:tests.FindRates@7f1302d6]" started-at="2022-05-18T02:52:08 IST" name="findRates" finished-at="2022-05-18T02:52:34 IST" duration-ms="26269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findRates -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.FindRates@7f1302d6]" started-at="2022-05-18T02:52:34 IST" name="afterClass" finished-at="2022-05-18T02:52:35 IST" duration-ms="429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- tests.FindRates -->
+      <class name="tests.rest">
+        <test-method signature="GetWeatherDetails()[pri:0, instance:tests.rest@43ee72e6]" started-at="2022-05-18T02:52:35 IST" name="GetWeatherDetails" finished-at="2022-05-18T02:52:38 IST" duration-ms="3366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetWeatherDetails -->
+      </class> <!-- tests.rest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

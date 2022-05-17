@@ -18,9 +18,9 @@ public class FindRooms {
 	
   @Test
   public void findRooms() {
-	  
+
 	  @SuppressWarnings("deprecation")
-	  	WebDriverWait wait = new WebDriverWait(driver, Duration.parse("30"));
+	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Homepage obj;
 		obj = new Homepage(driver);
 		DisneylandHotelPage dlp;
@@ -33,6 +33,12 @@ public class FindRooms {
 		obj.mouseClickByElement(obj.checkInDateSelector);
 		System.out.println("---Cliking on checkout date---");
 		obj.mouseClickByElement(obj.checkInDate);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		obj.mouseClickByElement(obj.checkOutDate);
 		System.out.println("---Selected trip dates---");
 		obj.hotelDropdown.click();

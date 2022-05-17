@@ -21,7 +21,7 @@ public class FindRates {
   public void findRates() {
 	  
 	  @SuppressWarnings("deprecation")
-	  	WebDriverWait wait = new WebDriverWait(driver, Duration.parse("30"));
+	  	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Homepage obj;
 		obj = new Homepage(driver);
 		ResortsPage rp;
