@@ -27,8 +27,8 @@ public class FindRooms {
 		driver.get("https://disneyworld.disney.go.com/");		
 		driver.manage().window().maximize();				
 		System.out.println("---Opened Disney Homepage---");		
-		wait.until(ExpectedConditions.visibilityOf(obj.hideButton));
-		obj.hideButton.click();
+		wait.until(ExpectedConditions.visibilityOf(obj.viewNowButton));
+		obj.viewNowButton.click();
 		wait.until(ExpectedConditions.elementToBeClickable(obj.checkInDateSelector));
 		System.out.println("---Clicked on date selector---");
 		obj.mouseClickByElement(obj.checkInDateSelector);

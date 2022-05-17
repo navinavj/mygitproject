@@ -9,18 +9,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ResortsPage {
-	
+
 	WebDriver driver;
 
-	@FindBy(xpath = "//div[contains(@class,'bestValuePrice')]")
-	List<WebElement> availableResorts;
-	
+	@FindBy(xpath = "//div[@data-rate-type='best-value']")
+	public List<WebElement> noOfAvailableResorts;
+
 	@FindBy(xpath = "//h1[contains(text(),'Explore Resort Hotels')]")
 	public WebElement resortsHeading;
 	
 	public int Availability() {
-		List<WebElement> i = driver.findElements(By.xpath("//*[@name='addToCart']"));
-		return i.size();
+		return noOfAvailableResorts.size();
 	}
 	
 	public ResortsPage(WebDriver driver)

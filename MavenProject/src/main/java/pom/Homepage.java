@@ -10,8 +10,8 @@ public class Homepage {
 	
 	WebDriver driver;
 
-	@FindBy(xpath = "//button[contains(text(),'Hide')]")
-	public WebElement hideButton;
+	@FindBy(xpath = "//button[contains(text(),'View Now')]")
+	public WebElement viewNowButton;
 	
 	@FindBy(id = "checkOutDate_display")
 	public WebElement checkOutSelector;
@@ -19,10 +19,10 @@ public class Homepage {
 	@FindBy(id = "checkInDate_display")
 	public WebElement checkInDateSelector;
 	
-	@FindBy(id = "2_18_2022")
+	@FindBy(id = "5_24_2022")
 	public WebElement checkInDate;
 	
-	@FindBy(id = "2_24_2022")
+	@FindBy(id = "5_28_2022")
 	public WebElement checkOutDate;
 	
 	@FindBy(id = "findPricesButton")
