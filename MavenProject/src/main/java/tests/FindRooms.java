@@ -10,6 +10,7 @@ import pom.DisneylandHotelPage;
 import pom.Homepage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
+import java.time.Duration;
 
 public class FindRooms {
 	
@@ -19,7 +20,7 @@ public class FindRooms {
   public void findRooms() {
 	  
 	  @SuppressWarnings("deprecation")
-	  	WebDriverWait wait = new WebDriverWait(driver,30);
+	  	WebDriverWait wait = new WebDriverWait(driver, Duration.parse("30"));
 		Homepage obj;
 		obj = new Homepage(driver);
 		DisneylandHotelPage dlp;
@@ -27,19 +28,11 @@ public class FindRooms {
 		driver.get("https://disneyworld.disney.go.com/");		
 		driver.manage().window().maximize();				
 		System.out.println("---Opened Disney Homepage---");		
-		wait.until(ExpectedConditions.visibilityOf(obj.viewNowButton));
-		obj.viewNowButton.click();
 		wait.until(ExpectedConditions.elementToBeClickable(obj.checkInDateSelector));
 		System.out.println("---Clicked on date selector---");
 		obj.mouseClickByElement(obj.checkInDateSelector);
 		System.out.println("---Cliking on checkout date---");
 		obj.mouseClickByElement(obj.checkInDate);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		obj.mouseClickByElement(obj.checkOutDate);
 		System.out.println("---Selected trip dates---");
 		obj.hotelDropdown.click();

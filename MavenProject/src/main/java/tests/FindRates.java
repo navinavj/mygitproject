@@ -11,6 +11,8 @@ import pom.ResortsPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
+import java.time.Duration;
+
 public class FindRates {
 	
 	public WebDriver driver;
@@ -19,7 +21,7 @@ public class FindRates {
   public void findRates() {
 	  
 	  @SuppressWarnings("deprecation")
-	  	WebDriverWait wait = new WebDriverWait(driver,30);
+	  	WebDriverWait wait = new WebDriverWait(driver, Duration.parse("30"));
 		Homepage obj;
 		obj = new Homepage(driver);
 		ResortsPage rp;
