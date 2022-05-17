@@ -3,20 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.NewTest">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="openMyBlog"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- tests.NewTest -->
-      <class name="tests.FindRates">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="findRates"/>
-        </methods>
-      </class> <!-- tests.FindRates -->
       <class name="tests.FindRooms">
         <methods>
           <include name="findRooms"/>
@@ -24,6 +10,13 @@
           <include name="afterClass"/>
         </methods>
       </class> <!-- tests.FindRooms -->
+      <class name="tests.FindRates">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="findRates"/>
+        </methods>
+      </class> <!-- tests.FindRates -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
