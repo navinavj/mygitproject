@@ -34,12 +34,12 @@
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.FindRates -->
-      <class name="tests.rest">
+      <class name="tests.RestAPI">
         <test-method signature="GetWeatherDetails()[pri:0, instance:tests.rest@43ee72e6]" started-at="2022-05-18T02:52:35 IST" name="GetWeatherDetails" finished-at="2022-05-18T02:52:38 IST" duration-ms="3366" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetWeatherDetails -->
-      </class> <!-- tests.rest -->
+      </class> <!-- tests.RestAPI -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

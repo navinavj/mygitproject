@@ -3,5 +3,5 @@
 <testsuite ignored="0" hostname="Thinkpad" failures="0" tests="3" name="Test" time="37.369" errors="0" timestamp="2022-05-18T02:52:38 IST">
   <testcase classname="tests.NewTest" name="openMyBlog" time="3.507"/>
   <testcase classname="tests.FindRates" name="findRates" time="26.269"/>
-  <testcase classname="tests.rest" name="GetWeatherDetails" time="3.366"/>
+  <testcase classname="tests.RestAPI" name="GetWeatherDetails" time="3.366"/>
 </testsuite> <!-- Test -->
