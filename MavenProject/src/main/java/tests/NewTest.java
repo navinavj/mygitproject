@@ -7,8 +7,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
-
 public class NewTest {
 	
 	public WebDriver driver;
@@ -32,7 +30,7 @@ public class NewTest {
   @AfterClass
   public void afterClass() {
 	  driver.quit();
-	  System.out.println("closing chrome");
+	  System.out.println("closing edge");
 
 	  
   }
