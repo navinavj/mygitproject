@@ -6,7 +6,7 @@
 <!--      <class name="tests.NewTest"/>-->
 <!--      <class name="tests.FindRates"/>-->
 <!--      <class name="tests.FindRooms"/>           -->
-      <class name="tests.RestTest"/>
+      <class name="tests.api.RestTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
