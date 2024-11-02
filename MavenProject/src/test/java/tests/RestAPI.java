@@ -1,5 +1,9 @@
 package tests;
 
+import api.POJOFiles.ResponsePojo;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
@@ -9,8 +13,7 @@ import io.restassured.specification.RequestSpecification;
 public class RestAPI {
 
 	@Test
-	public void GetWeatherDetails()
-	{   
+	public void GetWeatherDetails() throws JsonProcessingException {
 		// Specify the base URL to the RESTful web service
 		RestAssured.baseURI = "https://demoqa.com/utilities/weather/city";
 
@@ -26,6 +29,12 @@ public class RestAPI {
 		// Now let us print the body of the message to see what response
 		// we have received from the server
 		String responseBody = response.getBody().asString();
+
+		ObjectMapper mapper = new ObjectMapper();
+//		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+		ResponsePojo responsePojo = mapper.readValue(responseBody,ResponsePojo.class);
+
+		System.out.println(responsePojo.getWindDirectionDegree());
 		System.out.println("Response Body is =>  " + responseBody);
 		
 		String statusLine = response.getStatusLine().toString();

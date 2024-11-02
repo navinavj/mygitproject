@@ -1,13 +1,17 @@
 package tests;
 
+import api.POJOFiles.ResponsePojo;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import org.testng.annotations.DataProvider;
-//{"City":"Amritsar","Temperature":"101 Degree celsius","Humidity":"197 Percent","Weather Description":"scattered clouds","Wind Speed":"153 Km per hour","Wind Direction degree":"171 Degree"}
 
 public class RestTest {
 
@@ -17,14 +21,14 @@ public class RestTest {
                 {"Amritsar","Hyderabad","Chennai"};
     }
     @Test(dataProvider = "userData")
-    public void rest(String city) {
+    public void validateHumidity(String city) {
        given()
                 .baseUri("https://demoqa.com/utilities/weather/city")
                 .when()
                 .get("/"+city)
                 .then()
                .statusCode(200)
-               .body("City",equalTo(city)).log().all();
+               .body("City",equalTo(city));//.log().all();
         Response response =        given()
                 .baseUri("https://demoqa.com/utilities/weather/city")
                 .when()
@@ -33,6 +37,20 @@ public class RestTest {
         JsonPath jsonPath = new JsonPath(value);
         String cityName = jsonPath.getString("Humidity");
         System.out.println(cityName);
+    }
+
+    @Test
+    public void GetWeatherDetails() throws JsonProcessingException {
+        RestAssured.baseURI = "https://demoqa.com/utilities/weather/city";
+        RequestSpecification httpRequest = RestAssured.given();
+        Response response = httpRequest.get("/Amritsar");
+        response.then().log().all();
+        String responseBody = response.getBody().asString();
+        ObjectMapper mapper = new ObjectMapper();
+        ResponsePojo responsePojo = mapper.readValue(responseBody,ResponsePojo.class);
+        System.out.println(responsePojo.getWindDirectionDegree());
+        String statusLine = response.getStatusLine().toString();
+        Assert.assertEquals(statusLine /*actual value*/, "HTTP/1.1 200 OK" /*expected value*/, "Correct status code returned");
     }
 
 }
