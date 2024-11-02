@@ -21,7 +21,7 @@ public class RestAPI {
 
 		// Make a request to the server by specifying the method Type and the method URL.
 		// This will return the Response from the server. Store the response in a variable.
-		Response response = httpRequest.get("/Amrits");
+		Response response = httpRequest.get("/Amritsar");
 
 		// Now let us print the body of the message to see what response
 		// we have received from the server
